@@ -1,0 +1,14 @@
+/*
+ The MIT License (MIT)
+ Copyright (c) 2022 Emeer Adhamian (github.com/kode-trek)
+ https://github.com/kode-trek/game/blob/main/LICENSE
+ https://github.com/kode-trek/archive/blob/main/LICENSE
+*/
+
+@media only screen and (max-width: 400px) { /* mobile */
+ #footer {
+  position: fixed;
+  bottom: 16;
+  width: 95%;
+ }
+}

@@ -1,0 +1,19 @@
+#! /bin/bash
+
+sudo apt-get update
+sudo apt-get install -y apache2
+
+sudo gzip /var/www/html/index.html 2>/dev/null
+
+path="/var/www/html/X-O/"
+if [[ -e $path ]]
+then
+ echo "[WARNING] an application with similar name found: $path"
+ read -p "Continue? (Y/N): " confirm && [[ $confirm == [yY] ]] || exit 1
+fi
+
+sudo rm -r $path 2>/dev/null
+sudo mkdir $path
+sudo cp -r "lib/"* $path
+
+./START
