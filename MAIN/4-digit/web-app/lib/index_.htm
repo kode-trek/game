@@ -1,0 +1,56 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="src.css">
+
+<div align="center" id="footer"><table>
+ <tr><th>4-DIGIT</th></tr>
+ <tr><td>
+  Guess a four-digit number in 8 times.<br>
+  <b>1A</b> if <i>value</i> and <i>position</i> are both correct<br>
+  <b>1B</b> if only <i>value</i> is correct.<br>
+  Get <b>4A0B</b> to <b>win</b>. (more
+  <a target="_blank" href="http://fourdigits.sourceforge.net/">details</a>...)
+ </td></tr>
+ <tr><td>
+  <hr>
+  <b>Guess Result</b>
+  <br>
+  1. <span class="p" id="g1"></span> <span class="p" id="r1"></span><br>
+  2. <span class="p" id="g2"></span> <span class="p" id="r2"></span><br>
+  3. <span class="p" id="g3"></span> <span class="p" id="r3"></span><br>
+  4. <span class="p" id="g4"></span> <span class="p" id="r4"></span><br>
+  5. <span class="p" id="g5"></span> <span class="p" id="r5"></span><br>
+  6. <span class="p" id="g6"></span> <span class="p" id="r6"></span><br>
+  7. <span class="p" id="g7"></span> <span class="p" id="r7"></span><br>
+  8. <span class="p" id="g8"></span> <span class="p" id="r8"></span><br>
+  <hr>
+ </td></tr>
+ <tr><td>
+  <p align="center"><input id="id1" readonly></p>
+  <table align="center">
+   <tr>
+    <td class="a" id="b0" onClick="b0()">0</td>
+    <td class="a" id="b1" onClick="b1()">1</td>
+    <td class="a" id="b2" onClick="b2()">2</td>
+    <td class="a" id="b3" onClick="b3()">3</td>
+    <td class="a" id="b4" onClick="b4()">4</td>
+   </tr>
+   <tr>
+    <td class="a" id="b5" onClick="b5()">5</td>
+    <td class="a" id="b6" onClick="b6()">6</td>
+    <td class="a" id="b7" onClick="b7()">7</td>
+    <td class="a" id="b8" onClick="b8()">8</td>
+    <td class="a" id="b9" onClick="b9()">9</td>
+   </tr>
+  </table>
+ </td></tr>
+ <tr align="center"><td>
+  <br>
+  <input type="button" value="New Game" onclick="f0();location.reload()">
+  <input id="cls" type="button" value="Clear" onclick="f0()">
+  <input id="chk" type="button" value="Check" onclick="f1()">
+  <input id="rvl" type="button" value="Reveal" onclick="f2()">
+ </td></tr>
+</table></div>
+
+<script src="src.js"></script>

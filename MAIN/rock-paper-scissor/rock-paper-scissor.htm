@@ -1,0 +1,58 @@
+<p>_<span id="id3"></span></p>
+<p>COMPUTER: <span id="id1"></span></p>
+<p>
+PLAYER:
+<button type="button" onClick="f1()">rock</button>
+<button type="button" onClick="f2()">paper</button>
+<button type="button" onClick="f3()">scissor</button>
+</p>
+
+<script>
+function rand_int(min, max) {
+ return Math.floor(Math.random() * (max - min) + min)
+}
+
+var opponent = rand_int(1, 4)
+var computer = ""
+function f() {
+ if (opponent == 1) computer = "rock"
+ if (opponent == 2) computer = "paper"
+ if (opponent == 3) computer = "scissor"
+}
+f()
+
+var rock = "1"
+var paper = "2"
+var scissor = "3"
+
+var result = ""
+
+function f1() {
+ result = rock + opponent
+ f4()
+ opponent = rand_int(1, 4)
+ f()
+}
+function f2() {
+ result = paper + opponent
+ f4()
+ opponent = rand_int(1, 4)
+ f()
+}
+function f3() {
+ result = scissor + opponent
+ f4()
+ opponent = rand_int(1, 4)
+ f()
+}
+
+var win = ["13", "21", "32"]
+var push = ["11", "22", "33"]
+
+function f4() {
+ document.getElementById("id1").innerHTML = computer
+ if (win.includes(result)) document.getElementById("id3").innerHTML = "PLAYER WON!"
+ else if (push.includes(result)) document.getElementById("id3").innerHTML = "PLAY AGAIN"
+ else document.getElementById("id3").innerHTML = "PLAYER LOST!"
+}
+</script>

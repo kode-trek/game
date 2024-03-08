@@ -1,0 +1,11 @@
+@media only screen and (max-width: 400px) { /* mobile */
+ #footer {
+  position: fixed;
+  bottom: 16;
+  width: 95%;
+ }
+}
+
+.b {font-size: 10px;}
+
+td {text-align: center;}

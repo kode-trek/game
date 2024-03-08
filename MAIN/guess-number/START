@@ -1,0 +1,21 @@
+#! /bin/bash
+
+if [ ! -e "/var/www/html/guess-number/index.htm" ]
+then
+ echo "[FAILED] not found: /var/www/html/guess-number/index.htm"
+ read -n1 -r -p "press any key to EXIT..." key
+ exit
+fi
+
+firefox --version 1>/dev/null 2>/dev/null
+if [ "$?" -ne 0 ]
+then
+ echo "/var/www/html/guess-number/index.htm"
+ read -n1 -r -p "press any key to EXIT..." key
+else
+ echo -n "[] Loading via FireFox..."
+ firefox --private-window "/var/www/html/guess-number/index.htm" \
+ 1>/dev/null 2>/dev/null
+ echo "Done."
+ read -n1 -r -p "press any key to EXIT..." key
+fi

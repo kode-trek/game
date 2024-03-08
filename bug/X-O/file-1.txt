@@ -1,0 +1,77 @@
+	}
+				//2, 5, and 8
+				if (Square2 == Square5 && Square8 == Square5) {
+					GameOverDecider = true;
+				}
+				//4, 5, and 6
+				if (Square4 == Square5 && Square6 == Square5) {
+					GameOverDecider = true;
+				}
+				//3, 5, and 7
+				if (Square3 == Square5 && Square7 == Square5) {
+					GameOverDecider = true;
+				}
+			}
+				
+			//Check if their are draws
+			if (Square1 != '1' && Square2 != '2' && Square3 != '3' && 
+				Square4 != '4' && Square5 != '5' && Square6 != '6' && 
+				Square7 != '7' && Square8 != '8' && Square9 != '9' && !GameOverDecider){
+					GameOverDecider = true;
+					WinGame = false;
+
+			if(GameOverDecider){
+				if(WinGame){
+					cout << "Player " << PlayerTurn << " totally wins!" << endl;
+				}
+				//Print the result board
+				cout << "       " << Square1 << "  |  " << Square2 << "  |  " << Square3 << endl;
+				cout << "     -----+-----+-----" << endl;
+				cout << "       " << Square4 << "  |  " << Square5 << "  |  " << Square6 << endl;
+				cout << "     -----+-----+-----" << endl;
+				cout << "       " << Square7 << "  |  " << Square8 << "  |  " << Square9 << endl;
+				cout << "     -----+-----+-----" << endl;
+
+				//Choice to whether to play the game again
+
+				cout << "\tGame Over!" << endl;
+				cout << "\tWant to play again?(Y/N)?: ";
+				char PlayAgain;
+				cin >> PlayAgain;
+
+				//Clears Board Back to the original numbers
+				if(PlayAgain = 'y'){
+					GameOverDecider = false;
+					Square1 = '1';
+					Square2 = '2';
+					Square3 = '3';
+					Square4 = '4';
+					Square5 = '5';
+					Square6 = '6';
+					Square7 = '7';
+					Square8 = '8';
+					Square9 = '9';
+				}
+				PlayerTurn = 1;
+			} else {
+				// If the game is still going on, alternate the players turns
+				if (PlayerTurn == 1){
+					PlayerTurn = 2;
+				} else {
+					PlayerTurn = 1;
+				}
+			}
+		
+		// End of Main Do While Loop
+		} while (!GameOverDecider);
+
+		
+	//End of Menu Choice If Statement
+	} else(MenuChoice == 2) {
+		cout << "Ok....." << endl;
+		}
+
+	system ("pause"); 
+	return 0;
+	
+}

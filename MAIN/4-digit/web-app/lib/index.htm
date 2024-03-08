@@ -1,0 +1,49 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="src.css">
+
+<div align='center' id='footer'>
+<hr>
+<p>
+<h1>4-digits</h1>
+Guess a four-digit number in 8 times.
+<h3><a href='http://fourdigits.sourceforge.net/'>Rules</a></h3>
+You get one <b>A</b> if its <i>value and position</i> are both correct, and you
+get one <b>B</b> if <i>only its value</i> is correct.<br>
+You win the game when you get <i>4A0B</i>. 
+</p>
+<hr>
+<br>
+Entry:
+<input id='id1' readonly>
+
+<table>
+	<tr><th></th><th>Guess</th><th>Result</th></tr>
+	<tr><td>1.</td><td class='p' id='g1'></td><td class='p' id='r1'></td></tr>
+	<tr><td>2.</td><td class='p' id='g2'></td><td class='p' id='r2'></td></tr>
+	<tr><td>3.</td><td class='p' id='g3'></td><td class='p' id='r3'></td></tr>
+	<tr><td>4.</td><td class='p' id='g4'></td><td class='p' id='r4'></td></tr>
+	<tr><td>5.</td><td class='p' id='g5'></td><td class='p' id='r5'></td></tr>
+	<tr><td>6.</td><td class='p' id='g6'></td><td class='p' id='r6'></td></tr>
+	<tr><td>7.</td><td class='p' id='g7'></td><td class='p' id='r7'></td></tr>
+	<tr><td>8.</td><td class='p' id='g8'></td><td class='p' id='r8'></td></tr>
+</table> 
+
+<input class='b' id='b0' type='button' value='0' onclick='b0()'>
+<input class='b' id='b1' type='button' value='1' onclick='b1()'>
+<input class='b' id='b2' type='button' value='2' onclick='b2()'>
+<input class='b' id='b3' type='button' value='3' onclick='b3()'>
+<input class='b' id='b4' type='button' value='4' onclick='b4()'>
+<br>
+<input class='b' id='b5' type='button' value='5' onclick='b5()'>
+<input class='b' id='b6' type='button' value='6' onclick='b6()'>
+<input class='b' id='b7' type='button' value='7' onclick='b7()'>
+<input class='b' id='b8' type='button' value='8' onclick='b8()'>
+<input class='b' id='b9' type='button' value='9' onclick='b9()'>
+<br><br>
+<input type='button' value="New Game" onclick="f0();location.reload()">
+<input id='chk' type='button' value='Check' onclick='f1()'>
+<input id='chk' type='button' value='Clear' onclick='f0()'>
+</div>
+
+<script src='src.js'></script>

@@ -1,0 +1,20 @@
+#footer {
+	position: fixed;
+	bottom: 10;
+	width: 100%;
+}
+
+#id2 {
+	width: 221px;
+	height: 142px;
+	resize: none;
+}
+
+.b	{
+/*	padding: 10px;*/
+	font-size: 10px;
+}
+
+td {
+	text-align: center;
+}
