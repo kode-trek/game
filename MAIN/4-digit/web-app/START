@@ -1,0 +1,22 @@
+#! /bin/bash
+
+path="/var/www/html/4-digit/default.htm"
+
+if [ ! -e $path ]
+then
+ echo "[FAILED] not found: $path"
+ read -n1 -r -p "press any key to EXIT..." key
+ exit
+fi
+
+firefox --version 1>/dev/null 2>/dev/null
+if [ "$?" -ne 0 ]
+then
+ echo $path
+ read -n1 -r -p "press any key to EXIT..." key
+else
+ echo -n "[] Loading via FireFox..."
+ firefox --private-window $path 1>/dev/null 2>/dev/null
+ echo "Done."
+ read -n1 -r -p "press any key to EXIT..." key
+fi

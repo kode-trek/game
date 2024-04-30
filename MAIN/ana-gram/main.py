@@ -1,0 +1,38 @@
+# ana-gram
+# https://en.wikipedia.org/wiki/Anagram
+
+from func import *
+
+try: text = read_text_file(argv[1])
+except: text = ""
+
+db_active = []
+if text != "": db_active = cleanse(text)
+else: db_active = db_default
+try:
+ number_of_correct_answers = 0
+ number_of_words_to_guess = len(db_active)
+ print str(number_of_words_to_guess) + " word(s) to guess."
+ print "--------------------"
+ print ""
+ c = 1
+ for i in db_active:
+  print str(c) + ". "
+  print "scrambled-word:\t" + scramble_it(i)
+  guess = raw_input("your-guess:\t")
+  if guess == i:
+   print "[CORRECT]\t" + i
+   print ""
+   number_of_correct_answers += 1
+   c += 1
+  else:
+   print "[WRONG]\t\t" + i
+   print ""
+   c += 1
+ print ""
+ print "score: [" + str(number_of_correct_answers) + "/" + str(number_of_words_to_guess) + "]"
+except:
+ print ""
+ print ""
+ print "score: [" + str(number_of_correct_answers) + "/" + str(number_of_words_to_guess) + "]"
+ exit()
